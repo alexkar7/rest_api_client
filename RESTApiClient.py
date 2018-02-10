@@ -20,9 +20,10 @@ class RESTApiClient(object):
                             params=self.params)
 
     def post(self,
+             headers,
              data):
 
         return requests.get(url=self.url,
                             params=self.params,
-                            headers=self.header,
+                            headers=headers,
                             data=data)
