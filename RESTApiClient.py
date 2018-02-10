@@ -7,19 +7,22 @@ class RESTApiClient(object):
 
     # *** INIT *** #
     def __init__(self,
-                 url):
+                 url,
+                 params):
 
         self.url = url
+        self.params = params
 
     # *** API *** #
-    def get(self,
-            params):
+    def get(self):
 
-        return requests.get(self.url,
-                            params=params)
+        return requests.get(url=self.url,
+                            params=self.params)
 
     def post(self,
              data):
 
-        return requests.get(self.url,
+        return requests.get(url=self.url,
+                            params=self.params,
+                            headers=self.header,
                             data=data)
