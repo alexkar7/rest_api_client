@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+.idea/misc.xml
+.idea/modules.xml
+.idea/rest_api_client.iml
+.idea/workspace.xml
