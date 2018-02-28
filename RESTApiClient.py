@@ -14,16 +14,20 @@ class RESTApiClient(object):
         self.params = params
 
     # *** API *** #
-    def get(self):
+    def get(self,
+            verify):
 
         return requests.get(url=self.url,
+                            verify=verify,
                             params=self.params)
 
     def post(self,
+             verify,
              headers,
              data):
 
         return requests.get(url=self.url,
+                            verify=verify,
                             params=self.params,
                             headers=headers,
                             data=data)
