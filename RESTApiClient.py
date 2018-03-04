@@ -18,8 +18,8 @@ class RESTApiClient(object):
             verify):
 
         return requests.get(url=self.url,
-                            verify=verify,
-                            params=self.params)
+                            params=self.params,
+                            verify=verify)
 
     def post(self,
              verify,
@@ -27,7 +27,7 @@ class RESTApiClient(object):
              data):
 
         return requests.get(url=self.url,
-                            verify=verify,
                             params=self.params,
+                            verify=verify,
                             headers=headers,
                             data=data)
